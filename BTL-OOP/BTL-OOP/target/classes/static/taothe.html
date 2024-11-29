@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo thẻ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="nav">
+            <div class="nav-btn">
+                <div class="nav-btn-list">
+                    <button class="btn-list js-btn_list">
+                        <svg class="list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-btn-reload">
+                    <button type="button" onclick="tai_lai_trang()">
+                        <svg class="logo-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-btn_search">
+                <div class="search-box">
+                    <button class="search-box_btn">
+                        <svg class="btn-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <input class="search-box_input" placeholder="Tìm kiếm bài kiểm tra thử" type="text-search">
+                </div>
+            </div>
+            <div class="btn-right">
+                <div class="btn-right_choice">
+                    <button class="btn-right_plus">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="btn-right_note">
+                    <a role="button" href="https://quizlet.com/upgrade?source=header_plus&redir=https%3A%2F%2Fquizlet.com%2Flatest" >
+                        <span>Nâng cấp: dùng thử miễn phí 7 ngày</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-btn">
+                    <div class="modal-btn-list">
+                        <button class="btn-list js-btn-close">
+                            <svg class="list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-btn-reload">
+                        <button class="btn-reload" onclick="tai_lai_trang()">
+                            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <ul class="modal-related">
+                    <li>
+                        <div class="modal-home-item">
+                            <button class="modal-icon" type="button" onclick="goToHomePage()">
+                                <svg class="modal-home-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span>Trang chủ</span>
+                                </i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="modal-folder-item">
+                            <button class="modal-icon" type="button" onclick="goToLib()">
+
+                                <svg class="modal-folder-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
+                                </svg>
+                                <span>Thư viện của bạn</span>
+                                </i>
+                                </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="modal-bell-item">
+                            <button class="modal-icon">
+                                <svg class="modal-bell-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                                </svg>
+                                <span>Thông báo</span>
+                                </i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="header-container">
+            <h1>Tạo một học phần mới</h1>
+            <button class="btn-create">
+                <span>Tạo</span>
+            </button>
+        </div>
+        <div id="form">
+            <input
+                    type="text-form"
+                    placeholder="Nhập tiêu đề, ví dụ 'Sinh học - Chương 22: Tiến hóa'"
+                    class="input-field"
+            />
+            <textarea
+                    placeholder="Thêm mô tả..."
+                    class="textarea-field"
+            ></textarea>
+        </div>
+
+        <div class="container" id="card-container">
+            <div class="new-card">
+                <div class="card-header">
+                    <span>1</span>
+                    <button class="delete-button" onclick="removeCard(this)">X</button>
+                </div>
+                <div class="card-body">
+                    <div class="field">
+                        <label for="term-1">THUẬT NGỮ</label>
+                        <input type="text" id="term-1" placeholder="Nhập thuật ngữ">
+                    </div>
+                    <div class="field">
+                        <label for="definition-1">ĐỊNH NGHĨA</label>
+                        <input type="text" id="definition-1" placeholder="Nhập định nghĩa">
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-card">
+                <div class="card-header">
+                    <span>2</span>
+                    <button class="delete-button" onclick="removeCard(this)">X</button>
+                </div>
+                <div class="card-body">
+                    <div class="field">
+                        <label for="term-1">THUẬT NGỮ</label>
+                        <input type="text" id="term-1" placeholder="Nhập thuật ngữ">
+                    </div>
+                    <div class="field">
+                        <label for="definition-1">ĐỊNH NGHĨA</label>
+                        <input type="text" id="definition-1" placeholder="Nhập định nghĩa">
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-card">
+                <div class="card-header">
+                    <span>3</span>
+                    <button class="delete-button" onclick="removeCard(this)">X</button>
+                </div>
+                <div class="card-body">
+                    <div class="field">
+                        <label for="term-1">THUẬT NGỮ</label>
+                        <input type="text" id="term-1" placeholder="Nhập thuật ngữ">
+                    </div>
+                    <div class="field">
+                        <label for="definition-1">ĐỊNH NGHĨA</label>
+                        <input type="text" id="definition-1" placeholder="Nhập định nghĩa">
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-card-button" onclick="addCard()">Thêm Thẻ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+
+
+        // Thêm một thẻ mới
+        function addCard() {
+            const cardContainer = document.getElementById('card-container');
+
+            // Tạo thẻ mới
+            // const cards = cardContainer.getElementsByClassName('new-card');
+            const newCard = document.createElement('div');
+            newCard.className = 'new-card';
+
+            const newCardIndex = cardContainer.getElementsByClassName('new-card').length + 1; // Xác định số thứ tự cho thẻ mới
+
+            newCard.innerHTML = `
+              <div class="card-header">
+                  <span>${newCardIndex}</span> <!-- Số thứ tự cho thẻ mới -->
+                  <button class="delete-button" onclick="removeCard(this)">X</button>
+              </div>
+              <div class="card-body">
+                  <div class="field">
+                    <label for="term-${newCardIndex}">THUẬT NGỮ</label>
+                    <input type="text" id="term-${newCardIndex}" placeholder="Nhập thuật ngữ">
+                  </div>
+                  <div class="field">
+                    <label for="definition-${newCardIndex}">ĐỊNH NGHĨA</label>
+                    <input type="text" id="definition-${newCardIndex}" placeholder="Nhập định nghĩa">
+                  </div>
+              </div>
+            `;
+
+            // Thêm thẻ mới vào container
+            const addCardButton = document.querySelector('.add-card-button'); // Nút "Thêm Thẻ"
+            cardContainer.insertBefore(newCard, addCardButton); // Đặt thẻ mới phía trên nút "Thêm Thẻ"
+
+            // Cập nhật lại số thứ tự của tất cả các thẻ
+            updateCardNumbers();
+        }
+
+        // Xóa một thẻ
+        function removeCard(button) {
+          const card = button.closest('.new-card'); // Tìm thẻ cha gần nhất
+          card.remove(); // Xóa thẻ khỏi DOM
+
+          // Cập nhật lại số thứ tự của tất cả các thẻ
+          updateCardNumbers();
+        }
+
+        // Cập nhật số thứ tự cho tất cả các thẻ
+        function updateCardNumbers() {
+          const cards = document.querySelectorAll('.new-card');
+          cards.forEach((card, index) => {
+            const span = card.querySelector('.card-header span');
+            if (span) {
+              span.textContent = index + 1; // Đặt lại số thứ tự
+            }
+          });
+        }
+
+        const saveDeckAndFlashcards = async () => {
+            // Lấy thông tin từ các input fields trong form
+            const deckName = document.querySelector('.input-field').value;  // Lấy tên bộ thẻ
+            const description = document.querySelector('.textarea-field').value;  // Mô tả bộ thẻ
+
+            const flashcards = getFlashcardsFromForm();  // Lấy các flashcard từ form
+
+             if (!deckName || !description) {
+                alert('Vui lòng nhập đầy đủ thông tin bộ đề.');
+                return; // Dừng nếu không nhập đủ thông tin
+            }
+
+            if (flashcards.length < 2) {
+                alert('Bộ thẻ cần ít nhất 2 flashcard. Vui lòng thêm flashcard!');
+                return; // Dừng nếu không đủ flashcard
+            }
+
+            const deck = {
+                name: deckName,
+                description: description,
+                flashcards: flashcards  // Danh sách flashcards
+            };
+
+            try {
+                const response = await fetch('http://localhost:8080/decks', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'  // Gửi dữ liệu dưới dạng JSON
+                    },
+                    body: JSON.stringify(deck)  // Chuyển đối tượng deck thành chuỗi JSON
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log("Deck and flashcards saved successfully:", data);
+                    alert('Bộ thẻ và thẻ flashcards đã được lưu thành công!');
+                    window.location.reload();
+                } else {
+                    console.error("Error saving deck and flashcards:", response.statusText);
+                    alert('Có lỗi xảy ra khi lưu bộ thẻ!');
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert('Không thể kết nối tới server!');
+            }
+        };
+
+        // Hàm lấy thông tin flashcards từ form
+        const getFlashcardsFromForm = () => {
+            const flashcards = [];
+            const flashcardElements = document.querySelectorAll('.new-card');  // Chọn tất cả các flashcard trong form
+
+            flashcardElements.forEach(flashcardElem => {
+                const term = flashcardElem.querySelector('.field input[placeholder="Nhập thuật ngữ"]').value;
+                const definition = flashcardElem.querySelector('.field input[placeholder="Nhập định nghĩa"]').value;
+
+                // Kiểm tra nếu thuật ngữ và định nghĩa không rỗng
+                if (term && definition) {
+                    flashcards.push({ question: term, answer: definition });  // Thêm flashcard vào danh sách
+                }
+            });
+
+            return flashcards;
+        };
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnCreate = document.querySelector('.btn-create');
+            if (btnCreate) {
+                btnCreate.addEventListener('click', saveDeckAndFlashcards);
+            } else {
+                console.error("Không tìm thấy nút với class 'btn-create'.");
+            }
+        });
+
+    </script>
+</body>
+</html>

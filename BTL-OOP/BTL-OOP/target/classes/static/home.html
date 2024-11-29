@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="nav">
+              <div class="nav-btn">
+                <div class="nav-btn-list">
+                  <button class="btn-list js-btn_list">
+                    <svg class="list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                    </svg>                           
+                  </button>
+                </div>
+                <div class="nav-btn-reload">
+                  <button type="button" onclick="tai_lai_trang()">
+                    <svg class="logo-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
+                    </svg>                     
+                  </button>
+                </div>
+              </div>
+              <div class="nav-btn_search">
+                <div class="search-box">
+                  <button class="search-box_btn">
+                    <svg class="btn-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                    </svg>              
+                  </button>
+                  <input class="search-box_input" placeholder="Tìm kiếm bài kiểm tra thử" type="text-search">
+                </div>
+              </div>
+              <div class="btn-right"> 
+                <div class="btn-right_choice">
+                    <button class="btn-right_plus" onclick="window.location.href='taothe.html'">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                          <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                        </svg>
+                      </button>                      
+                </div>
+                <div class="btn-right_note">
+                  <a role="button" href="https://quizlet.com/upgrade?source=header_plus&redir=https%3A%2F%2Fquizlet.com%2Flatest" >
+                    <span>Nâng cấp: dùng thử miễn phí 7 ngày</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="modal">
+                <div class="modal-container js-modal-container">
+                  <div class="modal-btn">
+                    <div class="modal-btn-list">
+                      <button class="btn-list js-btn-close">
+                        <svg class="list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                        </svg>                
+                      </button>
+                    </div>
+                    <div class="modal-btn-reload">
+                      <button class="btn-reload" onclick="tai_lai_trang()">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                          <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
+                        </svg>                
+                      </button>
+                    </div>
+                  </div>
+                  <ul class="modal-related">
+                    <li>
+                      <div class="modal-home-item">
+                        <button class="modal-icon" type="button" onclick="tai_lai_trang()">
+                          <svg class="modal-home-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                          </svg>                  
+                            <span>Trang chủ</span>
+                          </i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="modal-folder-item">
+                        <button class="modal-icon" onclick="window.location.href='thuvien.html'">
+                          <svg class="modal-folder-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
+                          </svg>                  
+                            <span>Thư viện của bạn</span>
+                          </i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="modal-bell-item">
+                        <button class="modal-icon">
+                          <svg class="modal-bell-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                          </svg>                  
+                            <span>Thông báo</span>
+                          </i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                  <hr>
+                </div>
+            </div>
+        </div>
+        <div id="home-container">
+            <div class="op-cards">
+                <span>Bộ thẻ ghi nhớ</span>
+                <div class="box-flashcards">
+                    <div class="flashcard-folder">
+                        <span class="text-info">
+                            <a class="text-title" href="luyentap.html">Luyện tập I</a>
+                        </span>
+                    </div>
+    
+                    <div class="flashcard-folder">
+                        <span class="text-info">
+                            <a class="text-title" href="luyentap.html">Luyện tập II</a>
+                        </span>
+                    </div>
+
+                    <div class="flashcard-folder">
+                        <span class="text-info">
+                            <a class="text-title" href="luyentap.html">Luyện tập III</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="op-books">
+                <span class="text-op-books">Sách giáo khoa</span>
+                <div class="box-books">
+                    <div class="img-folder">
+                         <a href="https://cuuduongthancong.com/pvf/2188626/giai-tich-ham-1-bien/pham-ngoc-anh/bai-giang-giai-tich-1-ngoc-anh.pdf">
+                            <p>Giải tích I</p>
+                         </a>
+                    </div>
+
+                    <div class="img-folder">
+                        <a href="https://fr.scribd.com/document/80886825/Tai-Li%E1%BB%87u-Thi-Tri%E1%BA%BFt-h%E1%BB%8Dc-Ptit">
+                            <p>Triết học Mac-Lênin</p>
+                        </a>
+                    </div>
+
+                    <div class="img-folder">
+                        <a href="https://fr.scribd.com/document/658881799/123doc-Ptit-de-Cuong-Dap-an-Chuan-Tu-Tuong-Hcm-Hoc-Vien-Cong-Nghe-Buu-Chinh-Vien-Thong">
+                            <p>Tư tưởng Hồ Chí Minh</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
